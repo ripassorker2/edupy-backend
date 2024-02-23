@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/rsr/My Computer/Devlopement/Client project/edupy academy/edupy backend/logs/winston/errors/.dce2f5156ca9da19a828974bca502bcaf70f5b97-audit.json",
+    "files": [
+        {
+            "date": 1700462700295,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/edupy academy/edupy backend/logs/winston/errors/UM-2023-20-11-12-error.log",
+            "hash": "f100cc6a3c20ad60c7124bb85b2222d1c11635a0ed4ea1a251fd794ce1fd618b"
+        }
+    ],
+    "hashType": "sha256"
+}
