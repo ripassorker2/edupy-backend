@@ -18,20 +18,24 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
       data: result,
    });
 });
+
+const getSingleUser = catchAsync(async (req: Request, res: Response) => {
+   const result = await UserServices.getSingleUser(req.params.email);
+
+   console.log('sdkfjsdkfhsdjik');
+
+   sendResponse<IUser>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'User fetch successfully..!!',
+      data: result,
+   });
+});
+
 const getAllUsers = catchAsync(async (req: Request, res: Response) => {
    const result = await UserServices.getAllUsers();
 
    sendResponse<IUser[]>(res, {
-      statusCode: StatusCodes.OK,
-      success: true,
-      message: 'Users fetch successfully..!!',
-      data: result,
-   });
-});
-const getSingleUser = catchAsync(async (req: Request, res: Response) => {
-   const result = await UserServices.getSingleUser(req.params.id);
-
-   sendResponse<IUser>(res, {
       statusCode: StatusCodes.OK,
       success: true,
       message: 'Users fetch successfully..!!',

@@ -1,11 +1,13 @@
-import { StatusCodes } from 'http-status-codes';
-import express, { Application, NextFunction, Request, Response } from 'express';
+import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import express, { Application, NextFunction, Request, Response } from 'express';
+import { StatusCodes } from 'http-status-codes';
 import { globalErrorHandler } from './app/middleware/globalErrorHandler';
 import routes from './app/routes';
-import cookieParser from 'cookie-parser';
 
 const app: Application = express();
+
+app.use('/uploads', express.static('uploads'));
 
 // cors
 app.use(cors());

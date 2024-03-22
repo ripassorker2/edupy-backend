@@ -10,8 +10,8 @@ const getAllUsers = async (): Promise<IUser[] | null> => {
    const user = await User.find();
    return user;
 };
-const getSingleUser = async (id: string): Promise<IUser | null> => {
-   const user = await User.findById(id);
+const getSingleUser = async (email: string): Promise<IUser | null> => {
+   const user = await User.findOne({ email });
    return user;
 };
 

@@ -34,7 +34,7 @@ const loginUser = async (
 
    // create access token
    const accessToken = jwtHelpers.createToken(
-      { email, role: isUserExist?.role },
+      { email, role: isUserExist?.role, id: isUserExist._id },
       config.jwt.secret_token as Secret,
       config.jwt.secret_expires as string
    );
@@ -46,7 +46,6 @@ const loginUser = async (
    );
 
    return {
-      id: isUserExist._id,
       refreshToken,
       accessToken,
    };

@@ -15,14 +15,10 @@ router.post(
    UserControler.createUser
 );
 router.get(
-   '/:id',
+   '/:email',
    auth(USER_ROLE.ADMIN, USER_ROLE.STUDENT),
    UserControler.getSingleUser
 );
-router.get(
-   '/',
-   // auth(USER_ROLE.ADMIN, USER_ROLE.STUDENT),
-   UserControler.getAllUsers
-);
+router.get('/', UserControler.getAllUsers);
 
 export const UserRoutes = router;
