@@ -17,8 +17,6 @@ const createBook = async (
       rating: 0,
    };
 
-   console.log(book);
-
    return await Book.create(book);
 };
 
@@ -26,7 +24,7 @@ const getSingleBook = async (id: string): Promise<IBook | null> => {
    return await Book.findById(id);
 };
 const getAllBooks = async (): Promise<IBook[] | null> => {
-   return await Book.find();
+   return await Book.find().sort({ createdAt: -1 });
 };
 const createReview = async (payload: IReview): Promise<IBook | null> => {
    const book = await Book.findOne({ _id: payload.bookId });
@@ -38,7 +36,7 @@ const createReview = async (payload: IReview): Promise<IBook | null> => {
    );
 
    if (isExsitReview)
-      throw new ApiError(StatusCodes.CONFLICT, 'Review already exist');
+      throw new ApiError(StatusCodes.CONFLICT, 'Review already submitted');
    reviews.push(payload);
 
    let totalRating = 0;
