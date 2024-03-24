@@ -3,13 +3,13 @@ import { Document, Model } from 'mongoose';
 export type IBookUser = {
    name: string;
    email: string;
-   image: string;
+   // image: string;
 };
 
 export type IReview = {
    bookId: string;
    rating: number;
-   message: string;
+   // message: string;
    reviewer: IBookUser;
 } & Document;
 

@@ -13,24 +13,24 @@ const createUserZodSchema = z.object({
       password: z.string({
          required_error: 'Password is required',
       }),
-      dateOfBirth: z.string({
-         required_error: 'Date of birth is required',
-      }),
+      // dateOfBirth: z.string({
+      //    required_error: 'Date of birth is required',
+      // }),
 
       // educationalQualification: z.string({
       //    required_error: 'Educational Qualification is required',
       // }),
 
-      parmanentAddress: z.string({
-         required_error: 'Permanent address is required',
-      }),
-      nidOrBirthNumber: z.string({
-         required_error: 'NID or Birth number is required',
-      }),
-      contactNumber: z.string({
-         required_error: 'Contact number  is required',
-      }),
-      profileImage: z.string({
+      // parmanentAddress: z.string({
+      //    required_error: 'Permanent address is required',
+      // }),
+      // nidOrBirthNumber: z.string({
+      //    required_error: 'NID or Birth number is required',
+      // }),
+      // contactNumber: z.string({
+      //    required_error: 'Contact number  is required',
+      // }),
+      avatar: z.string({
          required_error: 'Profile picture is required',
       }),
    }),

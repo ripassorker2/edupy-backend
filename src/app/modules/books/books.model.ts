@@ -8,10 +8,10 @@ const reviewSchema = new Schema<IReview>(
          type: Number,
          required: true,
       },
-      message: {
-         type: String,
-         required: true,
-      },
+      // message: {
+      //    type: String,
+      //    required: true,
+      // },
       reviewer: {
          type: Object,
          required: true,

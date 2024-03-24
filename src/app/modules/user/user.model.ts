@@ -25,29 +25,29 @@ const userSchema = new Schema<IUser, UserModel>(
          required: true,
          select: 0,
       },
-      dateOfBirth: {
-         type: String,
-         required: true,
-      },
-      parmanentAddress: {
-         type: String,
-         required: true,
-      },
+      // dateOfBirth: {
+      //    type: String,
+      //    required: true,
+      // },
+      // parmanentAddress: {
+      //    type: String,
+      //    required: true,
+      // },
       // educationalQualification: {
       //    type: String,
       //    required: true,
       // },
-      nidOrBirthNumber: {
-         type: String,
-         unique: true,
-         required: true,
-      },
-      contactNumber: {
-         type: String,
-         unique: true,
-         required: true,
-      },
-      profileImage: {
+      // nidOrBirthNumber: {
+      //    type: String,
+      //    unique: true,
+      //    required: true,
+      // },
+      // contactNumber: {
+      //    type: String,
+      //    unique: true,
+      //    required: true,
+      // },
+      avatar: {
          type: String,
          required: true,
       },

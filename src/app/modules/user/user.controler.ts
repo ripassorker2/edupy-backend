@@ -22,8 +22,6 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
 const getSingleUser = catchAsync(async (req: Request, res: Response) => {
    const result = await UserServices.getSingleUser(req.params.email);
 
-   console.log('sdkfjsdkfhsdjik');
-
    sendResponse<IUser>(res, {
       statusCode: StatusCodes.OK,
       success: true,

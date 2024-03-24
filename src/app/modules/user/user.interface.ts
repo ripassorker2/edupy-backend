@@ -5,12 +5,12 @@ export type IUser = {
    role: string;
    email: string;
    password: string;
-   dateOfBirth: string;
-   parmanentAddress: string;
+   avatar: string;
+   // dateOfBirth: string;
+   // parmanentAddress: string;
    // educationalQualification: string;
-   contactNumber: string;
-   nidOrBirthNumber: string;
-   profileImage: string;
+   // contactNumber: string;
+   // nidOrBirthNumber: string;
 };
 
 export type UserModel = Model<IUser, Record<string, unknown>>;
